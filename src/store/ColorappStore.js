@@ -1,5 +1,5 @@
 import dispatcher from '../Dispatcher';
-import * as ColorappActions from '../actions/ColorappActions';
+import * as ColorAppActions from '../actions/ColorappActions';
 import {EventEmitter} from 'events';
 
 class ColorappStore extends EventEmitter {
@@ -11,8 +11,8 @@ class ColorappStore extends EventEmitter {
 
     handlerActions(action){
         switch(action.type){
-            case ColorappActions.COLOR_APP_ACTIONS:{
-                this.activColor= action.value;
+            case ColorAppActions.COLOR_APP_ACTIONS.CHANGE_COLOR:{
+                this.activColor = action.value;
                 this.emit('storeUpdated');
                 break;
             }
@@ -27,7 +27,7 @@ class ColorappStore extends EventEmitter {
     }
 }
 
-const ColorAppStore = new ColorAppStore();
-dispatcher.register(ColorappStore.handlerActions.bind(ColorAppStore));
+const ColorAppStore = new ColorappStore();
+dispatcher.register(ColorAppStore.handlerActions.bind(ColorAppStore));
 
-export default colorAppStore;
+export default ColorAppStore;
