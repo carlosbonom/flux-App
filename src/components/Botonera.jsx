@@ -1,5 +1,6 @@
 import React from 'react'
 import './Botonera.css'
+import * as colorappActions from '../actions/ColorappActions';
 
 const Botonera = () =>{
 
