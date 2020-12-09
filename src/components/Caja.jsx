@@ -1,6 +1,8 @@
 import React from 'react'
 import './Caja.css'
 
+import ColorappStore from '../store/ColorappStore';
+
 const Caja = () =>{
 
     return(
